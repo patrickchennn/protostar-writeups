@@ -1,0 +1,51 @@
+```bash
+(gdb) disas main
+Dump of assembler code for function main:
+0x080484b9 <main+0>:	push   ebp
+0x080484ba <main+1>:	mov    ebp,esp
+0x080484bc <main+3>:	and    esp,0xfffffff0
+0x080484bf <main+6>:	sub    esp,0x20
+0x080484c2 <main+9>:	mov    DWORD PTR [esp],0x8
+0x080484c9 <main+16>:	call   0x80483bc <malloc@plt>
+0x080484ce <main+21>:	mov    DWORD PTR [esp+0x14],eax
+0x080484d2 <main+25>:	mov    eax,DWORD PTR [esp+0x14]
+0x080484d6 <main+29>:	mov    DWORD PTR [eax],0x1
+0x080484dc <main+35>:	mov    DWORD PTR [esp],0x8
+0x080484e3 <main+42>:	call   0x80483bc <malloc@plt>
+0x080484e8 <main+47>:	mov    edx,eax
+0x080484ea <main+49>:	mov    eax,DWORD PTR [esp+0x14]
+0x080484ee <main+53>:	mov    DWORD PTR [eax+0x4],edx
+0x080484f1 <main+56>:	mov    DWORD PTR [esp],0x8
+0x080484f8 <main+63>:	call   0x80483bc <malloc@plt>
+0x080484fd <main+68>:	mov    DWORD PTR [esp+0x18],eax
+0x08048501 <main+72>:	mov    eax,DWORD PTR [esp+0x18]
+0x08048505 <main+76>:	mov    DWORD PTR [eax],0x2
+0x0804850b <main+82>:	mov    DWORD PTR [esp],0x8
+0x08048512 <main+89>:	call   0x80483bc <malloc@plt>
+0x08048517 <main+94>:	mov    edx,eax
+0x08048519 <main+96>:	mov    eax,DWORD PTR [esp+0x18]
+0x0804851d <main+100>:	mov    DWORD PTR [eax+0x4],edx
+0x08048520 <main+103>:	mov    eax,DWORD PTR [ebp+0xc]
+0x08048523 <main+106>:	add    eax,0x4
+0x08048526 <main+109>:	mov    eax,DWORD PTR [eax]
+0x08048528 <main+111>:	mov    edx,eax
+0x0804852a <main+113>:	mov    eax,DWORD PTR [esp+0x14]
+0x0804852e <main+117>:	mov    eax,DWORD PTR [eax+0x4]
+0x08048531 <main+120>:	mov    DWORD PTR [esp+0x4],edx
+0x08048535 <main+124>:	mov    DWORD PTR [esp],eax
+0x08048538 <main+127>:	call   0x804838c <strcpy@plt>
+0x0804853d <main+132>:	mov    eax,DWORD PTR [ebp+0xc]
+0x08048540 <main+135>:	add    eax,0x8
+0x08048543 <main+138>:	mov    eax,DWORD PTR [eax]
+0x08048545 <main+140>:	mov    edx,eax
+0x08048547 <main+142>:	mov    eax,DWORD PTR [esp+0x18]
+0x0804854b <main+146>:	mov    eax,DWORD PTR [eax+0x4]
+0x0804854e <main+149>:	mov    DWORD PTR [esp+0x4],edx
+0x08048552 <main+153>:	mov    DWORD PTR [esp],eax
+0x08048555 <main+156>:	call   0x804838c <strcpy@plt>
+0x0804855a <main+161>:	mov    DWORD PTR [esp],0x804864b
+0x08048561 <main+168>:	call   0x80483cc <puts@plt>
+0x08048566 <main+173>:	leave  
+0x08048567 <main+174>:	ret    
+End of assembler dump.
+```

@@ -1,0 +1,94 @@
+```bash
+(gdb) disas main
+Dump of assembler code for function main:
+0x08048934 <main+0>:	push   ebp
+0x08048935 <main+1>:	mov    ebp,esp
+0x08048937 <main+3>:	and    esp,0xfffffff0
+0x0804893a <main+6>:	sub    esp,0x90
+0x08048940 <main+12>:	jmp    0x8048943 <main+15>
+0x08048942 <main+14>:	nop
+0x08048943 <main+15>:	mov    ecx,DWORD PTR ds:0x804b5f8
+0x08048949 <main+21>:	mov    edx,DWORD PTR ds:0x804b5f4
+0x0804894f <main+27>:	mov    eax,0x804ad70
+0x08048954 <main+32>:	mov    DWORD PTR [esp+0x8],ecx
+0x08048958 <main+36>:	mov    DWORD PTR [esp+0x4],edx
+0x0804895c <main+40>:	mov    DWORD PTR [esp],eax
+0x0804895f <main+43>:	call   0x804881c <printf@plt>
+0x08048964 <main+48>:	mov    eax,ds:0x804b164
+0x08048969 <main+53>:	mov    DWORD PTR [esp+0x8],eax
+0x0804896d <main+57>:	mov    DWORD PTR [esp+0x4],0x80
+0x08048975 <main+65>:	lea    eax,[esp+0x10]
+0x08048979 <main+69>:	mov    DWORD PTR [esp],eax
+0x0804897c <main+72>:	call   0x80487ac <fgets@plt>
+0x08048981 <main+77>:	test   eax,eax
+0x08048983 <main+79>:	jne    0x8048987 <main+83>
+0x08048985 <main+81>:	leave  
+0x08048986 <main+82>:	ret    
+0x08048987 <main+83>:	mov    DWORD PTR [esp+0x8],0x5
+0x0804898f <main+91>:	mov    DWORD PTR [esp+0x4],0x804ad8d
+0x08048997 <main+99>:	lea    eax,[esp+0x10]
+0x0804899b <main+103>:	mov    DWORD PTR [esp],eax
+0x0804899e <main+106>:	call   0x804884c <strncmp@plt>
+0x080489a3 <main+111>:	test   eax,eax
+0x080489a5 <main+113>:	jne    0x8048a01 <main+205>
+0x080489a7 <main+115>:	mov    DWORD PTR [esp],0x4
+0x080489ae <main+122>:	call   0x804916a <malloc>
+0x080489b3 <main+127>:	mov    ds:0x804b5f4,eax
+0x080489b8 <main+132>:	mov    eax,ds:0x804b5f4
+0x080489bd <main+137>:	mov    DWORD PTR [esp+0x8],0x4
+0x080489c5 <main+145>:	mov    DWORD PTR [esp+0x4],0x0
+0x080489cd <main+153>:	mov    DWORD PTR [esp],eax
+0x080489d0 <main+156>:	call   0x80487bc <memset@plt>
+0x080489d5 <main+161>:	lea    eax,[esp+0x10]
+0x080489d9 <main+165>:	add    eax,0x5
+0x080489dc <main+168>:	mov    DWORD PTR [esp],eax
+0x080489df <main+171>:	call   0x80487fc <strlen@plt>
+0x080489e4 <main+176>:	cmp    eax,0x1e
+0x080489e7 <main+179>:	ja     0x8048a01 <main+205>
+0x080489e9 <main+181>:	lea    eax,[esp+0x10]
+0x080489ed <main+185>:	lea    edx,[eax+0x5]
+0x080489f0 <main+188>:	mov    eax,ds:0x804b5f4
+0x080489f5 <main+193>:	mov    DWORD PTR [esp+0x4],edx
+0x080489f9 <main+197>:	mov    DWORD PTR [esp],eax
+0x080489fc <main+200>:	call   0x804880c <strcpy@plt>
+0x08048a01 <main+205>:	mov    DWORD PTR [esp+0x8],0x5
+0x08048a09 <main+213>:	mov    DWORD PTR [esp+0x4],0x804ad93
+0x08048a11 <main+221>:	lea    eax,[esp+0x10]
+0x08048a15 <main+225>:	mov    DWORD PTR [esp],eax
+0x08048a18 <main+228>:	call   0x804884c <strncmp@plt>
+0x08048a1d <main+233>:	test   eax,eax
+0x08048a1f <main+235>:	jne    0x8048a2e <main+250>
+0x08048a21 <main+237>:	mov    eax,ds:0x804b5f4
+0x08048a26 <main+242>:	mov    DWORD PTR [esp],eax
+0x08048a29 <main+245>:	call   0x804999c <free>
+0x08048a2e <main+250>:	mov    DWORD PTR [esp+0x8],0x6
+0x08048a36 <main+258>:	mov    DWORD PTR [esp+0x4],0x804ad99
+0x08048a3e <main+266>:	lea    eax,[esp+0x10]
+0x08048a42 <main+270>:	mov    DWORD PTR [esp],eax
+0x08048a45 <main+273>:	call   0x804884c <strncmp@plt>
+0x08048a4a <main+278>:	test   eax,eax
+0x08048a4c <main+280>:	jne    0x8048a62 <main+302>
+0x08048a4e <main+282>:	lea    eax,[esp+0x10]
+0x08048a52 <main+286>:	add    eax,0x7
+0x08048a55 <main+289>:	mov    DWORD PTR [esp],eax
+0x08048a58 <main+292>:	call   0x804886c <strdup@plt>
+0x08048a5d <main+297>:	mov    ds:0x804b5f8,eax
+0x08048a62 <main+302>:	mov    DWORD PTR [esp+0x8],0x5
+0x08048a6a <main+310>:	mov    DWORD PTR [esp+0x4],0x804ada1
+0x08048a72 <main+318>:	lea    eax,[esp+0x10]
+0x08048a76 <main+322>:	mov    DWORD PTR [esp],eax
+0x08048a79 <main+325>:	call   0x804884c <strncmp@plt>
+0x08048a7e <main+330>:	test   eax,eax
+0x08048a80 <main+332>:	jne    0x8048942 <main+14>
+0x08048a86 <main+338>:	mov    eax,ds:0x804b5f4
+0x08048a8b <main+343>:	mov    eax,DWORD PTR [eax+0x20]
+0x08048a8e <main+346>:	test   eax,eax
+0x08048a90 <main+348>:	je     0x8048aa3 <main+367>
+0x08048a92 <main+350>:	mov    DWORD PTR [esp],0x804ada7 ; "you have logged in already!"
+0x08048a99 <main+357>:	call   0x804883c <puts@plt>
+0x08048a9e <main+362>:	jmp    0x8048943 <main+15>
+0x08048aa3 <main+367>:	mov    DWORD PTR [esp],0x804adc3 ; "please enter your password"
+0x08048aaa <main+374>:	call   0x804883c <puts@plt>
+0x08048aaf <main+379>:	jmp    0x8048943 <main+15>
+End of assembler dump.
+```
